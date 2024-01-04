@@ -1,5 +1,8 @@
 ---
-
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+const pageTitle = "Pagina de Inicio";
 ---
 
 <html lang="en">
@@ -8,13 +11,15 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Astro {pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">inicio</a>
-		<a href="/about/">Sobre Astro</a>
-		<a href="/blog/">Blog de astro</a>
-		<h1>Hola Mundo</h1>
+		<Header/>
+		<h1>{pageTitle}</h1>
 		<p>Sitio creado para la Guia de creacion de blog con astro</p>
+		<Footer/>
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>

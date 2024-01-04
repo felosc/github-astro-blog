@@ -1,5 +1,7 @@
 ---
-
+import '../styles/global.css'
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 <html lang="en">
     <head>
@@ -11,9 +13,7 @@
     </head>
     <body>
         <h1>Blog De Astro</h1>
-        <a href="/">inicio</a>
-		<a href="/about/">Sobre Astro</a>
-		<a href="/blog/">Blog de astro</a
+        <Header/>
         <ul>
             <li>
                 <a href="/posts/post-1/">Publicación 1</a>
@@ -25,5 +25,6 @@
                 <a href="/posts/post-3/">Publicación 3</a>
             </li>
           </ul>
+          <Footer/>
     </body>
 </html>
