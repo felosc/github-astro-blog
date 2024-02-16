@@ -1,13 +1,9 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
 const {pageTitle} = Astro.props;
 ---
 <BlogLayout pageTitle={pageTitle}>
-  <h2>Infomacion que se carga en el eslot de index</h2>
-  <figure>
-    <img src="https://media.istockphoto.com/id/1446806052/es/foto/estudiante-joven-mirando-la-computadora-port%C3%A1til-viendo-el-aprendizaje-de-seminarios-web-en.jpg?s=612x612&w=0&k=20&c=C1HGq5Ol7u_BjluokWHxWtC11CwEllELBJ_8a6gc29c=" 
-    alt="mujer pensando frete a un portatil" 
-    width="550" 
-    height="450">
-  </figure>
+  {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 </BlogLayout>
