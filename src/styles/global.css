@@ -90,3 +90,11 @@ html {
   }
   
 }
+
+.post-li{
+  text-align: center;
+  list-style: none;
+  background-color: aqua;
+  border-radius: 5rem;
+  margin: 0.7rem;
+}
