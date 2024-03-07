@@ -117,3 +117,12 @@ html {
     font-size: 1.15em;
     background-color: #F8FCFD;
   }
+
+  html.dark {
+    background-color: #0a0922;
+    color: #fff;
+  }
+  
+  .dark .nav-links a {
+    color: #fff;
+  }
