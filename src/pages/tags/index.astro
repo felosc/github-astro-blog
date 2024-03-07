@@ -7,8 +7,11 @@ const pageTitle ='indice etiquetas'
 
 <BaseLayout pageTitle={pageTitle}>
     <ul>
-        <div class="tags">{tags.map((tag) => <p class="tag">
-            <a href={'/tags/{tag}'}>{tag}</a>
-            </p>)}</div>
+        <div class="tags">
+            {tags.map((tag) =>(
+                 <p class="tag"> <a href={`/tags/${tag}`}>{tag}</a></p>))}
+            </div>
     </ul>
+
+
 </BaseLayout>
